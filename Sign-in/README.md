@@ -3,6 +3,6 @@
 //除此,老旧的JQ库在做新生成DIV的click事件绑定,需要先绑定其现有的父元素,在追踪到需要事件绑定的子节点上<br>
 如这段代码<br>
 	$(".t_in").on("click", '.close', function () {<br>
-	&nbsp&nbsp$(".t_in").children().remove();<br>
-	&nbsp&nbsp$(".bg,t_wrap").addClass("hide")<br>
+	&nbsp&nbsp$ (".t_in").children().remove();<br>
+	&nbsp&nbsp$ (".bg,t_wrap").addClass("hide")<br>
  	});<br>
