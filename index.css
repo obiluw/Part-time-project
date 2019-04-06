@@ -1,0 +1,138 @@
+html{line-height: initial;}
+body{font-size: 0.32rem;padding-bottom: 2em !important;}
+html,body {width: 100%;
+    overflow: scroll;
+	/*overflow: hidden;*/
+}
+.hide{ display:none; }
+
+
+body{margin:0;background: url('../images/bg.png') top no-repeat fixed !important;; background-size:100% !important;position: relative;}
+.head img{width:100%;}
+.user-avatar{
+	width:1.8rem;height:1.8rem;margin:0 auto;border-radius: 100%;
+	background: url(../images/logo.png) no-repeat center center;background-size: 100% ;
+}
+.user-name p{font-size:14px;text-align: center;margin:.2rem auto;}
+.sign{
+	width:6.2rem;margin:0 auto;background: #fff;
+	border-radius: 15px;padding: .4rem;
+	min-height:3.4rem;box-shadow: 0px 4px 15px #444;
+}
+.sign-1{position: relative;}
+.sign-1 > p{padding-left: .5rem;position: relative;margin-bottom: .15rem;}
+.sign-1-head{
+	border-bottom: 1px solid;margin-bottom: .2rem;padding-bottom: .2rem;
+	border-color: #ddd;color: #ccc;font-size: 15px
+}
+.sign-2{width: 100%;text-align: center;height: 2.6rem;display: table;}
+.sign-2 > div{display: table-cell;vertical-align: middle;color:#f46c30;font-size:18px;}
+.activity-sign > p{
+	margin: .5rem auto;width: 4rem;line-height: 1rem;height: 1rem;
+	background: #ef6540;font-size: 20px;color: #fff;
+	text-align: center;border-radius: 20px;box-shadow: 0px 4px 15px #444;
+}
+.activity-detail > p{
+	width: 2rem;margin: 0 auto;color: #0e8ed5;
+	font-weight: bold;border-bottom: 2px solid #0e8ed5;text-align: center
+}
+.VX-CARD{text-align: center;}
+.VX-CARD-head{font-size: 18px;font-weight: bold;    text-align: center;    margin: .5rem auto;}
+.VX-CARD img{width: 60%;margin: 0 auto;display: block;}
+
+.QDCG{text-align: center;margin-bottom: 1rem !important;margin-top: .5rem !important}
+.QDCG p{color:#6c6c6c;font-size:14px;}
+.QDCG .QDCG-head{color:#1fc905;font-size:30px;padding-left: .5rem;color: #1fc905;font-size: 30px;position: relative;}
+.HDXZ{color:#060505;font-size: 14px;text-align: left;padding: .5rem .3rem;padding-top: 0;}
+.HDXZ-head{font-size: 18px;font-weight: bold;text-align: center;margin: .3rem auto !important;}
+.HDXZ > p{margin-bottom: .2rem;}
+.QDSB{padding: .4rem;text-align: center;color:#060505;font-size:14px;}
+.QDSB .QDSB-ok{margin: 0 auto;background: #f46c30;color: #fff;width: 2rem;padding: .1rem;border-radius: 8px;margin-top: .5rem;}
+.XZQD{padding-bottom: .2rem;}
+.XZQD > p{color: #060505;font-size: 16px;border-bottom: 1px solid #ddd;padding-bottom: .2rem;font-weight: bold;margin-bottom: .3rem;}
+.XZQD > form > p{margin-bottom: .3rem;}
+
+.icon{background-size: cover !important;display: inline-block;position: absolute;}
+.close{background: url(../images/close.png) no-repeat;width: 15px;height: 15px;top: .2rem;right: .2rem;}
+.icon-1{background: url(../images/icon-1.png) no-repeat;width: 25px;height: 25px;top: 0.15rem;left: .8rem;}
+.icon-11{background: url(../images/icon-11.png) no-repeat;width: 18px;height: 18px;top: 0;left: 0;}
+.icon-22{background: url(../images/icon-22.png) no-repeat;width: 18px;height: 18px;top: 0;left: 0;}
+.icon-33{background: url(../images/icon-33.png) no-repeat;width: 20px;height: 20px;top: 0;left: 0;}
+.icon-44{background: url(../images/icon-44.png) no-repeat;width: 15px;height: 15px;top: 0;right: 0;}
+/*以下是弹窗通用样式*/
+/* iphone 4-5 */W
+@media (min-device-width : 320px) and (max-device-width : 374px) and (-webkit-min-device-pixel-ratio : 2){
+    html{font-size: 85px;}
+}
+/* iphone 6 */
+@media (min-device-width : 375px) and (max-device-width : 720px) and (-webkit-min-device-pixel-ratio : 2){
+	html{font-size: 100px;}
+}
+/* iphone6 plus */
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) {
+    html {font-size: 110px;}
+}
+.bg{background:rgba(0,0,0,.8);position: absolute;width: 100%;height: 100%;z-index:100;top: 0;left: 0;}
+.t_wrap{ width:100%; height: 100%;position: fixed; left: 0;top: 0; z-index: 10000;}
+.t_out{ margin: 0 auto; height: 100%;width:6rem;overflow: hidden; position: relative;}
+.t_out{display: table; position: static;}
+.t_mid{display: table-cell; vertical-align: middle; position: static; background: none;}
+.t_in{
+    padding: .3rem .225rem .225rem .3rem;-webkit-border-radius: .05rem;
+    -moz-border-radius: .05rem;-ms-border-radius: .05rem;-o-border-radius: .05rem;
+    border-radius: .1rem;background: #fff;position: relative;
+}
+.t_in > p {text-align: center;font-size: .12rem;line-height: .25rem;}
+.t_in a {
+    display: block;
+    margin-top: .2rem;
+    -webkit-border-radius: .05rem;
+    -moz-border-radius: .05rem;
+    -ms-border-radius: .05rem;
+    -o-border-radius: .05rem;
+    border-radius: .05rem;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    font-size: .12rem;
+}
+a.t_single {margin: 0 auto;width: 1.6rem;color: #fff;background: #91c33e;border: 1px solid #91c33e;}
+.t_two a {width: .7rem;border: 1px solid #333;}
+.t_two a.cur {border: 1px solid #91c33e;background: #91c33e;color: #fff;}
+
+
+
+
+
+/*以下是移动端通用样式*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+button,article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark,
+audio, video {
+ 	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+button{background: transparent;}
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
