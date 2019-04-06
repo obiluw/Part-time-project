@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>签到活动</title>   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link href="css/index.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+<!--适配主逻辑 S
+<script type="text/javascript" scr="js/flexible.js"></script>-->
+<!--适配主逻辑 E-->
+<style>
+
+.icon-1{background: url('images/icon-1.png') no-repeat;}
+</style>
+</head>
+<body>
+    <div id="head">
+		<div class="head">
+			<img src="images/head.png" >
+			<img src="images/head2.png" >
+		</div>
+		
+		<!-- 立即签到/签到成功 -->
+		<div class="sign QDCG hide">
+			<p class="QDCG-head" style=""><span class="icon icon-1"></span>签到成功</p>
+			<p style="color:#f46c30;font-size:16px;margin: .3rem auto;">青春伴夕阳，感谢有你!</p>
+			<p style="margin-bottom: .1rem;">北京市四中教导处签到点</p>
+			<p>2019-03-13 15:32:13</p>
+		</div>
+
+		<div class="user-avatar"></div>
+		<div class="user-name"><p>吴秀波大兄弟</p></div>
+
+		<!-- 立即签到/签到成功 -->
+		<div class="foot-img hide" >
+			<img src="images/foot.png" >
+		</div>
+	</div>
+
+	<div id="section">
+		<div class="activity-content">
+			<!-- 签到页1 活动已开启 -->
+			<div class="activity-start">
+				<div class="sign">
+					<div class="sign-1">
+						<span class="icon icon-44"></span>
+						<p class="sign-1-head">当前距离我最近的签到点</p>
+						<p style="font-size:15px;font-weight: bold;"><span class="icon icon-11"></span>2019青春伴夕阳武汉大学签到点</p>
+						<p style="font-size:14px;"><span class="icon icon-22"></span>2019.06.24  9:00-17:00</p>
+						<p style="font-size:14px;">
+							<span class="icon icon-33"></span>
+							湖北省武汉市天宇街道05号张家界中学第三附属小学樱花四季盛开教室活动处
+						</p>
+						<div style="text-align: center;padding-top: .2rem;color:#5ba7df;">
+							<p class="change-sign">更换签到点</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 签到页2 活动未开启 -->
+			<div class="activity-no-start">
+				<div class="sign">
+					<div class="sign-2">
+						<div style="">活动尚未开启<br>敬请期待</div>
+					</div>
+				</div>
+			</div>
+			<!-- 立即签到 -->
+			<div class="activity-sign" >
+				<p>立即签到</p>
+			</div>
+
+			<!-- 查看活动需知 -->
+			<div class="activity-detail">
+				<p>查看活动需知</p>
+			</div>
+
+		</div>
+	</div>
+
+
+</div>
+	<!-- 弹窗 -->
+	<div class="bg hide"></div>
+	<div class="t_wrap hide">
+		<div class="t_out">
+        <div class="row t_mid">
+            <div class="t_in" >
+				<!-- 二维码关注 -->
+				<div class="VX-CARD hide">
+					<p class="VX-CARD-head">请先关注“青春伴夕阳” <br>公众号，再进行签到！</p>
+					<img src="images/wx.png" >
+					<p style="margin: .6rem auto;color: #a29f9f;">长按二维码识别并关注</p>
+					<span class="icon close"></span>
+                </div>				
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+
+
+//弹窗正则优化 -->
+//var QDSB = (function(){/*
+//				<div class="QDSB">
+//					<p style="margin-bottom: .2rem;">很遗憾！签到失败！</p>
+//					<p>未到签到时间或有效签到范围</p>
+//					<p class="QDSB-ok">确定</p>
+//					<span class="icon close"></span>
+//				</div>
+//*/});
+//QDSB.toString().match(/\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)\s*\*\//)
+$(document).ready(function(){  
+
+// 立即签到 -- 弹窗判断
+	$(".activity-sign > p").on("click", function(){
+		var QDSB="";
+			QDSB +='<div class="QDSB">'
+			QDSB +='<p style="margin-bottom: .2rem;">很遗憾！签到失败！</p>'
+			QDSB +='<p>未到签到时间或有效签到范围</p>'
+			QDSB +='<p class="QDSB-ok">确定</p>'
+			QDSB +='<span class="icon close"></span>'
+			QDSB +='</div>';
+		
+		// if失败
+		$(".t_in").append(QDSB);
+		$(".t_wrap , .bg").removeClass("hide");
+		// if成功
+		//$("#section").addClass{"hide"};
+		//$(".QDCG").removeClass{"hide"};
+		//$(".foot-img").removeClass{"hide"};
+ 	});
+// 查看活动需知 -- 弹窗活动详情页
+	$(".activity-detail > p").on("click", function(){
+		var HDXZ="";
+			HDXZ +='<div class="HDXZ">'
+			HDXZ +='<p class="HDXZ-head">活动需知</p>'
+			HDXZ +='<p>1.关注"青春伴夕阳"微信公众号</p>'
+			HDXZ +='<p>2.按要求，完成签到</p>'
+			HDXZ +='<p>3.第1名、11名、31名成功签到幸运志愿者将获得孝心礼品</p>'
+			HDXZ +='<p>4.活动结束后公布获奖名单</p>'
+			HDXZ +='<span class="icon close"></span>'
+            HDXZ +='</div>';
+		$(".t_in").append(HDXZ);
+		$(".t_wrap , .bg").removeClass("hide")
+ 	});
+// 更换签到点 -- 选择签到点
+	$(".change-sign").on("click", function(){
+		var XZQD="";
+			XZQD +='<div class="XZQD">'
+			XZQD +='<p style="color:#060505;font-size:18px;">选择签到点</p>'
+			XZQD +='<form>'
+			XZQD +='<p><input type="radio" name="address" id="address-1"><label for="address-1">2019青春伴夕阳武汉大学签到点</label></p>'
+			XZQD +='<p><input type="radio" name="address" id="address-2"><label for="address-2">2019青春伴夕阳浙江大学签到点</label></p>'
+			XZQD +='</form><span class="icon close"></span>'
+			XZQD +='</div>'
+		$(".t_in").append(XZQD);
+		$(".t_wrap , .bg").removeClass("hide")
+ 	});
+
+// 弹窗关闭 
+	$(".t_in").on("click", '.close', function () {
+		$(".t_in").children().remove();
+		$(".bg,t_wrap").addClass("hide")
+		
+ 	});
+});  
+
+</script>   
+</body>
+</html>
